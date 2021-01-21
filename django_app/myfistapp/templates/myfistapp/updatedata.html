@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title> Weclome to My App</title>
+    </head>
+
+    <body>
+        <form action="{% url 'insertdata' %}" method="POST" >
+            <table>
+                <tr>
+                <td>Employee Name:</td> 
+                <td><input type="text" name="ename"></td>   
+                </tr>
+                <tr>
+                    <td>
+                        Enter The Salary :
+                    </td>
+                    <td>
+                        <input type="text" name="esalary">
+                    </td>
+                </tr>
+          
+           <tr>
+               <td>{% csrf_token %}</td>
+               <td>
+                <input type="submit" value="Update">
+               </td>
+           </tr>
+        
+            </table>
+        </form>
+    </body>
+</html>
